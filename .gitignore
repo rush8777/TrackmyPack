@@ -1,0 +1,37 @@
+# Ignore everything by default
+/*
+
+# Allow essential files and folders
+!/.gitignore
+!/README.md
+!/package.json
+!/package-lock.json
+!/yarn.lock
+!/index.html
+!/src/
+!/src/**
+
+# Keep config and lockfiles
+!/.vscode/
+!/.vscode/**
+
+# Common folders and files to ignore even if "ignored everything" is lifted
+/node_modules
+/dist
+/build
+/.env
+/.env.local
+/.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage/
+.DS_Store
+Thumbs.db
+/.parcel-cache
+.cache/
+
+# Editor directories
+/.idea/
+/.vscode/
