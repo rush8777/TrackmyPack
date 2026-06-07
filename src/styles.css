@@ -721,8 +721,10 @@ h1 span {
 
 .distance-card {
   grid-column: 4;
-  grid-row: 1;
-  padding: 22px 20px;
+  grid-row: 1 / span 2;
+  padding: 22px 25px;
+  margin-bottom: 1px;
+  
 }
 
 .distance-card small,
@@ -794,6 +796,36 @@ h1 span {
   height: 9px;
   border-radius: 50%;
   background: rgba(200, 239, 249, 0.42);
+}
+/* Blog article figure: responsive images with a reasonable max size */
+.blog-figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.blog-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 720px;
+  max-height: 480px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(6, 22, 69, 0.12);
+}
+
+.blog-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(6, 22, 69, 0.6);
+}
+
+@media (max-width: 640px) {
+  .blog-figure img {
+    max-width: 100%;
+    max-height: 360px;
+  }
 }
 
 .timeline-dot::after {
@@ -1197,6 +1229,270 @@ h1 span {
   border: 1px solid rgba(150, 255, 255, 0.2);
   border-right: 0;
   border-radius: 56px 0 0 56px;
+}
+
+/* Responsive rules for small screens - preserves desktop look outside these queries */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 40px;
+    overflow: visible;
+  }
+
+  .hero-inner {
+    width: calc(100vw - 32px);
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  .hero-nav {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 12px 0 0;
+    gap: 8px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 13px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+    justify-self: center;
+    gap: 8px;
+  }
+
+  .nav-cta {
+    justify-self: end;
+    min-width: 96px;
+    height: 42px;
+    padding: 0 18px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    margin: 8px auto 0;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+  .hero-copy p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .primary-action {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+    align-self: center;
+    padding-bottom: 8px;
+  }
+
+  .phone-frame {
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 288px;
+    margin: 8px auto 0;
+  }
+
+  .phone-frame img,
+  .feature-map img,
+  .mini-map-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Hide decorative absolute stacks to avoid overflow on small screens */
+  .shipment-stack,
+  .stats-stack {
+    display: none;
+  }
+
+  .feature-shell {
+    width: calc(100vw - 32px);
+    height: auto;
+    padding: 20px 0 40px;
+  }
+
+  .feature-copy {
+    position: static;
+    width: 100%;
+    padding: 0 8px;
+    margin-bottom: 12px;
+  }
+
+  .feature-map {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    margin-top: 12px;
+    border-radius: 14px;
+  }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  /* Mobile-specific dashboard redesign (<=768px) */
+  .dashboard-shell {
+    background: transparent;
+    box-shadow: none;
+    padding: 12px 8px;
+  }
+
+  /* Make dashboard a clean vertical flow with clear map prominence */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 12px;
+    padding: 6px 0 18px;
+  }
+
+  .route-card {
+    grid-column: auto;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .mini-map-card {
+    position: relative;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .mini-map-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .distance-card {
+    grid-column: auto;
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-card,
+  .layers-card,
+  .proof-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Improve readability: slightly larger text on mobile for touch readability */
+  .route-card h2,
+  .timeline-card h3,
+  .layers-card h3,
+  .proof-card h3 {
+    font-size: 18px;
+  }
+
+  .timeline-list {
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .timeline-row {
+    grid-template-columns: 36px 18px 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Make controls and badges easier to tap */
+  .status-badge {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  /* Stack stat pills for mobile, full width */
+  .stat-pill {
+    grid-template-columns: auto 1fr;
+    padding: 10px 12px;
+    height: auto;
+  }
+
+  .dashboard-card { /* ensure cards fill width and are easier to press */
+    width: 100%;
+  }
+
+  /* Slight spacing adjustments for small phones */
+  @media (max-width: 420px) {
+    .mini-map-card { height: 180px; }
+    .route-card h2 { font-size: 16px; }
+  }
+
+  .tools-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delivery-flow {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Center hero visual and ensure phone is centered */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+  }
+
+  .phone-frame {
+    margin: 0;
+  }
+
+  /* Adjust dashboard sizing so cards don't appear shrunk */
+  .dashboard-shell {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .dashboard-card {
+    min-height: unset;
+    padding: 12px;
+  }
+
+  .mini-map-card img {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links { gap: 10px; font-size: 12px; }
+  .phone-frame { width: 180px; height: 240px; }
+  .hero-inner { width: calc(100vw - 20px); }
 }
 
 .route-loop::before {

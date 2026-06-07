@@ -117,9 +117,7 @@ function TrackingDashboard() {
               <span className="route-line muted" />
               <span className="route-node gray">✓</span>
             </div>
-            <div className="route-copy">
-              [City Hub] -- (5m) -- [Dispatch] -- (10m) -- [Your Zone] -- (3m) -- [Delivered]
-            </div>
+            
           </article>
 
           <article className="dashboard-card mini-map-card" aria-label="Route preview map">
@@ -128,9 +126,9 @@ function TrackingDashboard() {
           </article>
 
           <article className="dashboard-card distance-card">
-            <small>Total Dista Remaining</small>
+            <small>Distance Remaining</small>
             <strong>7.3 km</strong>
-            <span>Estimated Time to Arrival</span>
+            <span>Estimated Time</span>
             <p>18 minutes <em>(at 2:45 PM)</em></p>
           </article>
 
@@ -166,15 +164,7 @@ function TrackingDashboard() {
             </div>
           </article>
 
-          <article className="dashboard-card proof-card">
-            <h3>Proof of Delivery</h3>
-            <p>Future date</p>
-            <strong>[Sign-off Pending]</strong>
-            <div className="signature-box">
-              <ScanLine size={72} strokeWidth={0.9} />
-              <span>Signature</span>
-            </div>
-          </article>
+          
         </div>
       </div>
     </div>
@@ -371,7 +361,7 @@ function DeliveryToolsSection() {
                 <Zap size={13} strokeWidth={2.5} />
               </span>
               <div className="route-loop-card">
-                <strong>Your transaction is safe.</strong>
+                <strong>Your package is safe.</strong>
                 <small>Track movement, verify proof, and notify every user.</small>
               </div>
               <Button className="flow-button">
@@ -571,18 +561,35 @@ function BlogPage() {
             {
               heading: "Product overview",
               body: [
-                "TraceMyPack connects senders, riders, admins, and customers in one shared delivery workspace. Every order can move through clear stages: created, assigned, picked up, in transit, delayed, delivered, or closed.",
-                "The goal is to reduce manual calls and scattered updates by giving every stakeholder a reliable view of parcel status, ETA, route movement, and delivery proof.",
+                "TraceMyPack helps courier companies, delivery agencies, and logistics teams modernize their operations through real-time tracking, driver management, automated notifications, and centralized delivery monitoring.",
+                
+                "Traditional delivery systems often provide limited visibility into shipment progress, leaving customers uncertain about the location and arrival time of their packages while increasing the workload on support teams. TraceMyPack bridges this gap by creating a transparent delivery workflow that keeps dispatchers, drivers, businesses, and customers connected through live updates and accurate delivery information.",
+                
+                "From order creation and rider assignment to real-time tracking and proof of delivery, the platform provides the tools needed to improve operational efficiency, reduce customer inquiries, increase delivery visibility, and deliver a more reliable customer experience.",
+                { img: "D:\\web_dev\\New folder\\ref_img\\dash.png", alt: "Delivery route preview", caption: "Delivery zones and sample route." },
+                "Hello there"
               ],
+              
             },
+            
             {
-              heading: "Who it helps",
-              list: ["Courier companies managing daily routes", "Businesses sending products to customers", "Support teams answering delivery questions", "Riders who need a simple dispatch workflow"],
-            },
-            {
-              heading: "Core modules",
-              body: ["The product includes live parcel tracking, rider management, smart notifications, proof of delivery, route planning, pricing controls, and admin dashboards for operational decisions."],
-            },
+            heading: "Who it helps",
+            body: [
+              "TraceMyPack serves every stakeholder involved in the delivery process. From business owners seeking operational visibility to customers waiting for important packages, the platform provides the tools needed to create a more transparent, efficient, and reliable delivery experience.",
+              
+              "Each user benefits from access to real-time information, streamlined workflows, and delivery insights that help reduce delays, improve communication, and eliminate uncertainty throughout the delivery journey."
+            ],
+            list: [
+              "Business owners who need visibility into delivery operations",
+              "Dispatchers responsible for coordinating deliveries and drivers",
+              "Drivers managing pickups, routes, and proof of delivery",
+              "Customer support teams resolving delivery-related questions",
+              "Online stores requiring reliable shipment tracking",
+              "Courier agencies looking to modernize their delivery workflow",
+              "Logistics managers monitoring performance and efficiency",
+              "Customers who want accurate delivery updates and tracking"
+            ]
+          },
           ],
         },
         {
@@ -592,21 +599,42 @@ function BlogPage() {
           intro: "TraceMyPack works by turning each delivery into a trackable workflow with assigned riders, live checkpoints, customer updates, and final proof capture.",
           sections: [
             {
-              heading: "1. Create a delivery",
-              body: ["An admin or business user enters the customer details, pickup location, drop-off location, package notes, delivery fee, and priority level. The system creates a tracking ID that can be shared with the customer."],
+              heading: "Layers of TraceMyPack",
+              body: [
+                {img: "D:\\web_dev\\New folder\\ref_img\\app.png" ,alt: "Driver App vs Customer App"},
+                "The TraceMyPack platform consists of two primary experiences: the Driver Application and the Customer Tracking Experience. The driver application is designed to help delivery personnel efficiently manage their daily assignments while providing delivery companies with real-time visibility into field operations.",
+    
+            "Drivers receive delivery tasks directly from their courier company through a dedicated mobile application. Instead of relying on phone calls, paper records, or manual coordination, drivers have access to a structured workspace that clearly displays all assigned deliveries, delivery priorities, customer information, package details, and route progress.",
+            
+            "A live map provides a visual overview of all delivery destinations, allowing drivers to understand what deliveries are ahead of them and where they need to travel next. This helps improve route awareness, reduce navigation errors, and create a more organized delivery workflow throughout the day.",
+            
+            "As deliveries progress, drivers can update package statuses, record delivery events, capture proof of delivery, and communicate important information back to dispatch teams. Every action is synchronized in real time, ensuring that operations teams and customers always have access to the latest delivery information.",
+            
+            "By giving drivers a clear view of their workload, route progress, and delivery responsibilities, the application helps reduce confusion, improve delivery efficiency, and create a more reliable experience for both delivery companies and their customers."
+          
+            ],
             },
             {
-              heading: "2. Assign a rider",
-              body: ["The delivery is assigned to a rider based on availability, route area, capacity, or manual selection. The rider receives the job details and can update progress from pickup to completion."],
+              heading: "Driver Portal",
+              body: [
+                "The driver is assigned all scheduled orders for the following day, allowing them to plan their route and workload in advance. Through the mobile application, drivers can view a live GPS navigation map that guides them directly to each customer's location, reducing confusion and minimizing delivery delays. The system provides real-time route assistance, optimized navigation, and clear delivery instructions for every assigned package.",
+                {img: "ref_img\\dri_job.png" ,alt: "Delivery route preview", caption: "Delivery zones and sample route."},
+                "As drivers progress through their deliveries, the platform continuously updates the status of each order, enabling both the delivery company and customers to stay informed about the package's journey. Drivers can mark deliveries as completed, report issues, confirm successful handovers, and receive new updates instantly through the application. This creates a streamlined workflow that improves operational efficiency, increases delivery accuracy, and ensures a better overall experience for drivers, businesses, and customers alike.",
+                "Additionally, the application helps drivers manage multiple deliveries simultaneously by organizing tasks based on priority, location, and delivery schedules. By having complete visibility of upcoming stops and delivery requirements, drivers can complete more deliveries in less time while maintaining high service standards and reducing operational costs for the delivery service provider."]
             },
             {
-              heading: "3. Track movement",
-              body: ["As the rider moves through the workflow, TraceMyPack updates the parcel state and shows route progress. Customers can see the current status, ETA, and important changes without contacting support."],
-            },
-            {
-              heading: "4. Confirm delivery",
-              body: ["At the destination, the rider captures proof such as a signature, delivery note, or completion status. The order is closed and the admin dashboard keeps the delivery history for future reference."],
-            },
+              heading: "Customer Tracking",
+              body: [
+                "On the customer side, the system provides a transparent and real-time delivery experience that keeps users informed at every stage of their order journey. Once an order is placed, customers can track its status from dispatch to final delivery through a live interface that shows where their package is at any given moment. The platform integrates live GPS tracking, allowing customers to view the exact movement of the delivery driver on a map. This reduces uncertainty and eliminates the need for constant manual updates or support inquiries. Customers also receive timely notifications at key stages such as order confirmation, pickup, route departure, and imminent arrival. In addition, estimated delivery times are dynamically updated based on real-time traffic and driver progress, giving customers a more accurate expectation of when their package will arrive. If needed, they may also access delivery details, contact support, or communicate delivery instructions directly through the system. Overall, the customer side is designed to enhance trust, convenience, and transparency—turning the delivery process into a predictable and smooth experience rather than a black box.",
+                "A real-time map that shows the driver's current location and an estimated time of arrival (ETA).",
+                "Step-by-step delivery timeline with checkpoints (picked up, en route, near you, delivered) so customers always know what happened and what's next.",
+                "Smart ETA updates that adjust as the rider moves, plus push/SMS/email notifications for key events (assigned, on the way, delayed, delivered).",
+                "Customer actions such as providing delivery instructions, marking a preferred drop-off location, or requesting a reschedule directly from the tracking view.",
+                "Secure proof of delivery including photo, signature, or delivered-to details, visible to the customer immediately after completion.",
+                "In-app contact options to reach the driver or support with a single tap, plus delivery status history for easy dispute resolution and support handoffs.",
+                "Post-delivery feedback and ratings to help improve service quality and provide actionable insights to the delivery team."
+              ]
+            }
           ],
         },
         {
@@ -615,12 +643,34 @@ function BlogPage() {
           intro: "Use this setup checklist to configure TraceMyPack for your first delivery workflow.",
           sections: [
             {
-              heading: "Setup checklist",
-              list: ["Add your business profile and delivery zones", "Invite admins, dispatchers, and riders", "Create package types and delivery fee rules", "Configure customer notification templates", "Create a test delivery and verify the tracking flow"],
+              heading: "Simple Flow to Assign Tasks",
+              body: [
+                "The operater can assign tasks to the drivers using the most simplyfied way so no frustration is needed.",
+                "TracemyPack offers a simple four step workflow the operator to create orders systematicaly",
+                
+                {img: "ref_img\\hiw1.png", alt:"First step",caption: "Use this to create tasks for the drivers"},
+                "Select the 'Add Order' option in your dashboard then follow the instruction , this small setup can be configured as per the need of your company.",
+
+              ]
+              //list: ["Add your business profile and delivery zones", "Invite admins, dispatchers, and riders", "Create package types and delivery fee rules", "Configure customer notification templates", "Create a test delivery and verify the tracking flow"],
             },
             {
-              heading: "Recommended first workflow",
-              body: ["Start with one city or route area, one dispatcher, and a small rider group. This keeps testing simple while you confirm order creation, dispatch, live updates, and proof of delivery."],
+              heading: "Driver Dashboard",
+              body: [
+                "The Driver Dashboard gives drivers a single, mobile-first view of their day: an ordered manifest of assigned stops, counts and priorities, estimated route distance and ETA, and any dispatch notes. Drivers review the manifest before departure, confirm vehicle readiness, and use the built-in optimized route to navigate from stop to stop; tapping a stop reveals navigation, contact details, delivery instructions, and pickup controls.",
+                "During deliveries the dashboard keeps the system in sync—drivers scan or confirm parcels, mark stop states (En route, Arrived, Delayed), capture proof of delivery (photo, signature, recipient name), and file structured exceptions when needed. Events are queued offline and automatically synced, dispatch can push reassignments or urgent tasks, and an end-of-shift summary reconciles completed stops, unresolved items, and proof for audit and reporting."
+              ],
+              list: [
+                "Review manifest and confirm vehicle readiness",
+                "Start optimized route and navigate to first stop",
+                "Scan/confirm pickups and update counts",
+                "Mark stop states: En route → Arrived → Delivered",
+                "Capture proof (photo/signature) and add notes",
+                "Handle exceptions with structured reasons and photos",
+                "Receive and accept urgent reassignments from dispatch",
+                "Sync offline events when network is available",
+                "Run end-of-shift reconciliation and submit report"
+              ]
             },
           ],
         },
@@ -802,6 +852,32 @@ function BlogPage() {
     },
   ];
 
+  // Accept pasted image URLs or Windows paths and normalize them for the browser.
+  const normalizeImageSrc = (src) => {
+    if (!src) return src;
+    if (typeof src !== "string") return src;
+    // already a web/data URL or absolute root path
+    if (/^(https?:)|^data:|^\//i.test(src)) return src;
+    // normalize backslashes to forward slashes
+    const normalized = src.replace(/\\\\/g, "/").replace(/\\/g, "/");
+    // if path contains ref_img folder, map to a root-served path: /ref_img/...
+    const refMatch = normalized.match(/(ref_img\/.*)$/i);
+    if (refMatch) {
+      return `/${encodeURI(refMatch[1])}`;
+    }
+    // fallback: encode and return the normalized string
+    return encodeURI(normalized);
+  };
+
+  const isLikelyImageString = (value) => {
+    if (!value || typeof value !== "string") return false;
+    if (/ref_img[\\/]/i.test(value)) return true;
+    if (/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/i.test(value)) return true;
+    // windows absolute path with an image filename
+    if (/^[a-zA-Z]:[\\/].*\.(png|jpe?g|gif|webp|svg)$/i.test(value)) return true;
+    return false;
+  };
+
   return (
     <main className="blog-page-shell">
       <div className="blog-shell">
@@ -831,13 +907,13 @@ function BlogPage() {
           <aside className="blog-sidebar" aria-label="Blog categories">
             {sidebarGroups.map((group) => (
               <div className="sidebar-group" key={group.title}>
-                <button type="button">
+                <a href={`/blog/${group.articles[0].slug}`}>
                   <span>
                     {group.icon}
                     {group.title}
                   </span>
                   <ChevronRight size={14} strokeWidth={2.4} />
-                </button>
+                </a>
                 <div className="sidebar-links">
                   {group.articles.map((article) => (
                     <a
@@ -878,9 +954,33 @@ function BlogPage() {
                 {currentArticle.sections.map((section) => (
                   <section className="blog-article-section" key={section.heading}>
                     <h2>{section.heading}</h2>
-                    {section.body?.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                    {section.body?.map((block, idx) => {
+                          // string paragraph or image string
+                          if (typeof block === "string") {
+                            if (isLikelyImageString(block)) {
+                              const src = normalizeImageSrc(block);
+                              return (
+                                <figure className="blog-figure" key={`img-${idx}`}>
+                                  <img src={src} alt={section.heading} loading="lazy" decoding="async" />
+                                </figure>
+                              );
+                            }
+                            return <p key={`p-${idx}`}>{block}</p>;
+                          }
+
+                          // object with an `img` property
+                          if (block && block.img) {
+                            const src = normalizeImageSrc(block.img);
+                            return (
+                              <figure className="blog-figure" key={`img-${idx}`}>
+                                <img src={src} alt={block.alt || section.heading} loading="lazy" decoding="async" />
+                                {block.caption && <figcaption>{block.caption}</figcaption>}
+                              </figure>
+                            );
+                          }
+
+                          return null;
+                        })}
                     {section.list && (
                       <ul className="blog-body-list">
                         {section.list.map((item) => (
@@ -912,16 +1012,78 @@ function BlogPage() {
                   </section>
                 )}
                 <section className="blog-article-section">
-                  <h2>Start here</h2>
-                  <p>
-                    TraceMyPack is designed for modern courier teams that need one shared view of
-                    orders, riders, route progress, and customer communication. Start by creating a
-                    delivery, assigning a rider, and enabling live status updates.
-                  </p>
-                  <p>
-                    Once your first workflow is configured, use automated notifications and proof of
-                    delivery tools to reduce support questions and close each order with confidence.
-                  </p>
+                  <h2>Overview</h2>
+
+  <p class="lead">
+    TraceMyPack is a modern delivery operations platform that connects dispatchers,
+    drivers, businesses, and customers through a single real-time logistics ecosystem.
+    From order creation to final delivery confirmation, every stage of the delivery
+    journey is tracked, monitored, and optimized to provide complete operational
+    visibility and a better customer experience.
+  </p>
+
+  <h3>📦 Delivery Management</h3>
+  <p>
+    Create deliveries in seconds, organize shipments, assign riders, manage delivery
+    priorities, and track package progress from pickup to delivery. Every order is
+    automatically recorded with a detailed timeline, ensuring teams always know where
+    a package is, who is responsible for it, and what stage it is currently in.
+  </p>
+
+  <h3>🗺️ Live Tracking & Visibility</h3>
+  <p>
+    Monitor active deliveries in real time through live GPS tracking, route progress,
+    delivery milestones, and estimated arrival times. Operations teams gain a complete
+    overview of their fleet while customers receive accurate and transparent updates
+    without needing to contact support.
+  </p>
+
+  <h3>🚚 Driver Operations</h3>
+  <p>
+    Equip drivers with a dedicated mobile application designed for efficient delivery
+    execution. Drivers can view assigned deliveries, navigate optimized routes, update
+    delivery statuses, scan packages, capture proof of delivery, and communicate with
+    customers directly from a streamlined workflow.
+  </p>
+
+  <h3>👥 Customer Experience</h3>
+  <p>
+    Provide customers with a modern tracking experience that includes live delivery
+    updates, ETA notifications, delivery history, order status timelines, proof of
+    delivery records, and instant visibility into their shipment's progress. Reduce
+    uncertainty, improve trust, and minimize support inquiries.
+  </p>
+
+  <h3>📊 Operations & Analytics</h3>
+  <p>
+    Gain valuable insights into delivery performance through operational dashboards,
+    driver activity monitoring, delivery success metrics, route efficiency tracking,
+    failed delivery reporting, and performance analytics. Identify bottlenecks early
+    and make data-driven decisions to improve overall logistics performance.
+  </p>
+
+  <h3>🔔 Smart Notifications</h3>
+  <p>
+    Keep everyone informed with automated delivery notifications, status changes,
+    delay alerts, assignment updates, proof of delivery confirmations, and customer
+    communication tools. Real-time notifications help reduce manual follow-ups while
+    improving transparency across the entire delivery process.
+  </p>
+
+  <h3>🛡️ Proof of Delivery</h3>
+  <p>
+    Capture signatures, photos, timestamps, and GPS locations for every completed
+    delivery. Maintain a verifiable record of each shipment to reduce disputes,
+    improve accountability, and provide confidence for both businesses and customers.
+  </p>
+
+  <h3>🚀 Built to Scale</h3>
+  <p>
+    Whether you're operating a local courier service, managing an e-commerce delivery
+    network, or coordinating large-scale logistics operations, TraceMyPack provides
+    the tools needed to streamline workflows, improve visibility, enhance customer
+    satisfaction, and scale delivery operations with confidence.
+  </p>
 
                   <div className="quick-link-stack">
                     {quickLinks.map((article) => (
